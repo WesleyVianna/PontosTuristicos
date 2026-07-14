@@ -1,0 +1,58 @@
+@model PontosTuristicos.Models.PontoTuristico
+
+<h2>Novo Ponto Turístico</h2>
+
+
+<form asp-action="Novo" method="post">
+
+    <div class="mb-3">
+        <label>Nome</label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label>Descrição</label>
+        <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label>Localização</label>
+        <input asp-for="Localizacao" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <label>Cidade</label>
+        <input asp-for="Cidade" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <label>Estado</label>
+
+        <select asp-for="Estado" class="form-control">
+
+            <option value="">Selecione</option>
+
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <option>BA</option>
+            <option>RS</option>
+            <option>SC</option>
+            <option>PR</option>
+
+        </select>
+
+    </div>
+
+
+    <button class="btn btn-primary">
+        Salvar
+    </button>
+
+</form>

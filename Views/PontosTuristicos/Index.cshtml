@@ -1,0 +1,60 @@
+@model IEnumerable<PontosTuristicos.Models.PontoTuristico>
+
+<h2>Pontos Turísticos</h2>
+
+<a class="btn btn-primary mb-3" 
+   asp-action="Novo">
+    Novo Ponto Turístico
+</a>
+
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Localização</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @item.Nome
+                </td>
+
+                <td>
+                    @item.Localizacao
+                </td>
+
+                <td>
+                    @item.Cidade
+                </td>
+
+                <td>
+                    @item.Estado
+                </td>
+
+
+                <td>
+                    <a class="btn btn-sm btn-info"
+                       asp-action="Detalhes"
+                       asp-route-id="@item.Id">
+                        Detalhes
+                    </a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

@@ -1,0 +1,19 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Banco local
+*.db
+
+# Logs
+*.log
+
+# User settings
+*.user
+*.suo
+
+# Node
+node_modules/
